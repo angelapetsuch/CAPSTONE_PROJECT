@@ -18,8 +18,6 @@ public class SpinGame {
         // create spinner object from user input
         Spinner spinner = new Spinner(name, numberFields);
 
-             // create array
-        SpinnerField[] fields = new SpinnerField[numberFields];
         // get data
         for(int i = 0; i < fields.length; i++) {
             String content = Console.getString("Field " + (i+1) + ": ");
@@ -29,8 +27,6 @@ public class SpinGame {
         System.out.println();
         System.out.println(spinner.toString());
         System.out.println("**********************");
-        for(SpinnerField f : fields) {
-            System.out.println(f.toString());
-        }
+
     } // end main method
 } // end main class

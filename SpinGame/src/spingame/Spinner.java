@@ -23,11 +23,14 @@ public class Spinner {
         this.numFields = f;
     }
     
+    public Spinner() {
+    }
+    
     public String getField(int index) {
         return this.fields.get(index);
     }
     
-    public void addField(String field) {
+    public void setField(String field) {
         this.fields.add(field);
     }
 
