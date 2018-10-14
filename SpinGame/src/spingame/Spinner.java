@@ -30,8 +30,8 @@ public class Spinner {
         return this.fields.get(index);
     }
     
-    public void setField(String field) {
-        this.fields.add(field);
+    public void setField(ArrayList<String> fields) {
+        this.fields = fields;
     }
 
     /**
