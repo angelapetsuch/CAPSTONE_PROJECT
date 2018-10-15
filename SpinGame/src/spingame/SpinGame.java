@@ -1,5 +1,8 @@
 package spingame;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  * Angela Petsuch
  * 
@@ -7,7 +10,19 @@ package spingame;
  */
 public class SpinGame {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        // create the spinner
+        
+        // load the spinners if it exists
+        ArrayList<Spinner> spinners = IOUtil.load();
+        
+        // display spinner names
+        int numSpinners = spinners.size();
+        
+        for (int i = 0; i < numSpinners; i++) {
+            Spinner spinner = spinners.get(i);
+            System.out.println(spinner.getSpinnerName());
+        }
 
         System.out.println("Create a new Spinner!");
         System.out.println();
@@ -17,16 +32,17 @@ public class SpinGame {
         
         // create spinner object from user input
         Spinner spinner = new Spinner(name, numberFields);
-
-        // get data
-        for(int i = 0; i < fields.length; i++) {
-            String content = Console.getString("Field " + (i+1) + ": ");
-            
-            fields[i] = new SpinnerField(content); 
-        }
-        System.out.println();
-        System.out.println(spinner.toString());
-        System.out.println("**********************");
-
+        ArrayList <String> fields = new ArrayList<>();
+        
+        // get field info from user
+        for (int i = 0; i < numberFields; i++) {
+            String field = Console.getString("Field " + (i+1) + ": ");
+            fields.add(field);
+        } // end for 
+        spinner.setField(fields); // save fields to spinner object
+        spinners.add(spinner); // add spinner object to arraylist
+        IOUtil.save(spinners);
+        
+        
     } // end main method
 } // end main class

@@ -5,13 +5,14 @@
  */
 package spingame;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author angela
  */
-public class Spinner {
+public class Spinner implements Serializable{
     
     private String spinnerName;
     private int numFields;
