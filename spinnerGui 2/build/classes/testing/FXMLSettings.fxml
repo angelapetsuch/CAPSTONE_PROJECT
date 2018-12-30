@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testing.FXMLSettingsController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../styles/styles.css">
+         <top>
+            <Pane prefHeight="78.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="titleSpinnerBuilder" alignment="TOP_CENTER" layoutX="288.0" layoutY="3.0" styleClass="whitesmoke" text="Spinner Builder">
+                     <font>
+                        <Font name="Bauhaus 93" size="64.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#mainSceneButtonAction" prefHeight="46.0" prefWidth="120.0" text="Back">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox fx:id="gridHbox" layoutY="29.0" prefHeight="65.0" prefWidth="1000.0">
+                     <children>
+                        <VBox prefHeight="65.0" prefWidth="300.0">
+                           <children>
+                              <Label fx:id="categoryDrpDwnLabel" alignment="CENTER" styleClass="whitesmoke" text="Select Spinner">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="categoryComboBox" prefHeight="39.0" prefWidth="215.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="vBoxSpinnerName" prefHeight="65.0" prefWidth="223.0" />
+                        <VBox fx:id="vBoxFieldCount" prefHeight="65.0" prefWidth="227.0" />
+                        <VBox prefHeight="65.0" prefWidth="163.0">
+                           <children>
+                              <Button fx:id="addField" layoutX="827.0" layoutY="15.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="159.0" text="Add Field" translateX="50.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="gridContainer" layoutY="124.0" prefHeight="323.0" prefWidth="1000.0" />
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="76.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="saveSpinner" layoutX="827.0" layoutY="15.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="159.0" text="Save Spinner" />
+                  <Button fx:id="deleteSpinner" layoutX="641.0" layoutY="13.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="153.0" text="Delete Spinner" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

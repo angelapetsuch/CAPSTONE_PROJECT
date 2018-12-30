@@ -1,0 +1,97 @@
+.root {
+    -fx-background-image: url("/img/purple.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
+
+.button {
+    -fx-background-color: #310350;
+    -fx-text-fill: whitesmoke;
+    -fx-effect: dropshadow(three-pass-box, black, 10, .3, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: purple;
+    -fx-text-fill: white;
+}
+
+
+#gridContainer > .viewport {
+    -fx-background-color: transparent;
+    -fx-background-color: #313639;
+    -fx-opacity: 0.85;
+    -fx-padding: 45 45 45 45;
+}
+
+#gridContainer {
+    -fx-background-color: transparent;
+    -fx-background-color: #313639;
+    -fx-opacity: 0.85;
+}
+
+#gridContainer1 > .viewport {
+    -fx-background-color: transparent;
+    -fx-background-color: #313639;
+    -fx-opacity: 0.85;
+}
+
+#gridContainer1 {
+    -fx-background-color: #313639;
+    -fx-opacity: 0.85;
+}
+
+
+#gridContainer2 > .viewport {
+    -fx-background-color: transparent;
+    -fx-background-color: #313639;
+    -fx-opacity: 0.85;
+}
+
+#gridContainer2 {
+    -fx-background-color: #313639;
+    -fx-opacity: 0.85;
+}
+
+.grid-pane {
+    -fx-hgap: 4;
+    -fx-vgap: 10;
+}
+
+.text-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: whitesmoke;
+    -fx-padding: 16px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.text-label-build {
+    -fx-font-size: 12px;
+    -fx-text-fill: whitesmoke;
+    -fx-padding: 0 0 0 5px;
+}
+
+.text-label-field {
+    -fx-font-size: 22px;
+    -fx-text-fill: whitesmoke;
+    -fx-padding: 0 50px 0 50px;  
+}
+.text-label-big {
+    -fx-font-size: 32px;
+    -fx-text-fill: whitesmoke;
+    -fx-padding: 26px;
+
+}
+
+.text-field {
+    -fx-padding: 8px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+
+.whitesmoke {
+    -fx-text-fill: whitesmoke;
+}
+
+
